@@ -50,10 +50,9 @@ const getUnique = (query) => {//uses buildQuery to create the knex query and exe
 const getLoyals = (query) => {
 
   var d = new Date(2016, 9, 1);//Setting the time to the last day that the data is collected
-  // d.setMonth(d.getMonth() - 1);
-  console.log(d);
-  var t = d.getTime() / 1000;
-  console.log(t);
+  d = d.setMonth(d.getMonth() - 1);
+  var t = d / 1000;
+
 
 
   var initial = knex('visits').select('user').count('user');
