@@ -1,6 +1,7 @@
 # Statistics
 This is an assignment to build a HTTP API that recieves get requests and builds the response by fetching data from database.
 You can get the server started by running "node server.js".
+The API is built using Node and express, and PostgreSQL is used as database language.
 
 # Assumptions
  If you are going to get the server run on your machine, I assumed that the database already exists on your maching.
