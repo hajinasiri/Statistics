@@ -6,7 +6,6 @@ var modules = require('./app_modules.js');
 
 
 var files = fs.readdirSync('./data');//reads the name of all the files in folder "data"
-
 var file = '';
 files.forEach( (file,index) => {
   var begin = 17;//the index of the file in array "files". This number should change manually each time this file runs. the new number = current number + 17
@@ -18,11 +17,9 @@ files.forEach( (file,index) => {
           var record = row.split("");//sperate data in each row and creates an array from them
           if(row[0]){
             setTimeout(function(){//this setTimeout gives the code half a milisecond to insert each record to database. This is set to keep knex from crashing
-
                 modules.insert(record).then(val => {
                   log(Math.floor(rowIndex/250000*100), '% of the '+index+'th file from' ,files.length -1, 'is read')
                 })
-
             },Math.floor(rowIndex/2) )
           }else{
             log.clear();
