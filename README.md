@@ -16,5 +16,6 @@ You can get the server started by running "node server.js".
   - "csv-parse": "^3.0.0",
   - "express": "^4.16.3",
   - "knex": "^0.15.2",
+  - "Node":"^10.7.0",
   - "pg": "^7.4.3",
   - "single-line-log": "^1.1.2"
